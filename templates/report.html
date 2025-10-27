@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FortiPass — Report</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-left">
+<strong>FortiPass</strong>
+<a href="/">Home</a>
+</div>
+<div class="nav-right">
+<span class="user-name">Developed by Utkarsh Shukla</span>
+</div>
+</nav>
+
+
+<div class="container">
+<h1>Analysis Report</h1>
+<p class="subtitle">Recent analyzed password summaries (hashed IDs only)</p>
+
+
+<table class="report-table">
+<thead>
+<tr><th>ID</th><th>Entropy (bits)</th><th>Strength</th><th>Time (UTC)</th></tr>
+</thead>
+<tbody>
+{% for e in entries %}
+<tr>
+<td>{{ e.id }}</td>
+<td>{{ e.entropy }}</td>
+<td>{{ e.strength_label }}</td>
+<td>{{ e.time }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+
+<div class="actions">
+<a href="/">Back</a>
+</div>
+</div>
+</body>
+</html>

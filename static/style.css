@@ -1,0 +1,29 @@
+body{font-family:Arial;background:#f7f8fa;margin:0;padding:0;color:#111;}
+.container{max-width:600px;margin:30px auto;padding:20px;}
+h1{color:#1e293b;}
+.subtitle{color:#555;}
+.card{background:white;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:20px;margin-bottom:20px;}
+label{font-weight:600;}
+input{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;margin:8px 0;}
+button{background:#1e40af;color:white;padding:10px 16px;border:none;border-radius:6px;cursor:pointer;}
+button:hover{background:#1d4ed8;}
+.navbar{display:flex;justify-content:space-between;align-items:center;background:#0b1220;color:white;padding:10px 20px;border-radius:0 0 10px 10px;}
+.nav-left a{color:#a5b4fc;text-decoration:none;margin-left:12px}
+.nav-right .user-name{font-size:14px;color:#d1d5db}
+.pwd-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.toggle-btn:hover {
+  color: #1e40af;
+}

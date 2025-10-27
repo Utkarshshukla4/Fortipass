@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FortiPass — Password Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <strong>FortiPass</strong>
+      <a href="/">Home</a>
+    </div>
+    <div class="nav-right">
+      <span class="user-name">Developed by Utkarsh Shukla</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Password Strength Analyzer</h1>
+    <p class="subtitle">Interactive password strength analyzer (Flask)</p>
+
+    <div class="card">
+      <label for="pwd">Enter password</label>
+<div class="pwd-box">
+  <input id="pwd" type="password" placeholder="Type a password..." autocomplete="off">
+  <button type="button" id="togglePwd" class="toggle-btn">👁️</button>
+</div>
+
+      <div id="meter" class="meter">
+        <div id="meter-fill" class="meter-fill"></div>
+      </div>
+      <div id="label" class="label">—</div>
+
+      <div id="details" class="details hidden">
+        <p><strong>Entropy:</strong> <span id="entropy">0</span> bits</p>
+        <p><strong>Estimated crack time:</strong> <span id="crack">—</span></p>
+        <p><strong>Patterns detected:</strong> <span id="patterns">—</span></p>
+        <ul id="suggestions"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="analyzeBtn">Analyze</button>
+        <a class="report-link" href="/report">View Report</a>
+      </div>
+    </div>
+
+    <div class="card small">
+      <canvas id="entropyChart" width="400" height="120"></canvas>
+    </div>
+
+    <footer>
+      <small>Local demo — do not use real passwords on untrusted networks.</small>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
