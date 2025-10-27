@@ -18,7 +18,18 @@
  **Report Dashboard** | Displays analyzed passwords (hashed IDs only). |
  
  **Cross-Platform** | Works on both Windows & Linux. |
- 
+
+ ## What This Does
+
+-Lets users enter a password through a clean web GUI.
+
+-Analyses in Entropy = password strength measured in randomness. (More random → higher entropy → stronger password.)
+
+-Shows a strength label (Very Weak - Very Strong).
+
+-Gives an estimated crack time (how long it might take to guess).
+
+-Can generate reports (summaries of tested passwords).
 
 
 ##  Architecture 
@@ -46,20 +57,6 @@
       │  Pattern Recognition     │
       │ (utils/patterns.py)      │
       └──────────────────────────┘
-
-
-## What FortiPass Does
-
--Lets users enter a password through a clean web GUI.
-
--Analyses in Entropy = password strength measured in randomness. (More random → higher entropy → stronger password.)
-
--Shows a strength label (Very Weak - Very Strong).
-
--Gives an estimated crack time (how long it might take to guess).
-
--Can generate reports (summaries of tested passwords).
-
 
 
 ##  Project Structure
